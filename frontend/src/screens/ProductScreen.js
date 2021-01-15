@@ -14,6 +14,7 @@ import Rating from "../components/Rating";
 import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import { addToCart } from "../actions/cartActions";
 
 const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
@@ -28,7 +29,11 @@ const ProductScreen = ({ history, match }) => {
   }, [dispatch, match]);
 
   const addToCartHandler = () => {
-    history.push(`/cart/${match.params.id}?qty=${qty}`);
+    //The commented line is Brad's code, but in the forum I found a better solution
+    //Fixing the refreash bug
+    dispatch(addToCart(product._id, qty));
+    history.push("/cart");
+    //history.push(`/cart/${match.params.id}?qty=${qty}`);
   };
 
   return (
