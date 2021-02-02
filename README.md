@@ -2,13 +2,9 @@
 
 # Sobre o projeto
 
+https://proshopapp-alex.herokuapp.com/
+
 Ecommerce desenvovido no curso <a href="https://www.udemy.com/course/mern-ecommerce/" target="_blank">MERN eCommerce From Scratch</a>
-
-<div align="center" >
-  <img src="./docs/assets/dashboard.gif">
-</div>
-
-Não há banco de dados. Os dados são carregados de 2 arquivos que contém arrays simulando os repositórios de dados.
 
 ### Layout & Componentes Responsivos
 
